@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Devops_KT" Language="1033" Version="1.0.0.0" Manufacturer="Philips Healthcare" UpgradeCode="28c842e5-ae1c-47c2-a892-abf54f3e7ee3">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <Media
+      Id="1"
+      Cabinet="media1.cab"
+      EmbedCab="yes"
+      CompressionLevel="high" />
+
+    <Feature Id="ProductFeature" Title="Devops_KT" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="FileSystem_Components" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Devops">
+          <Directory Id="TEST" Name="Test" >
+            <Directory Id="TEST3" Name="something" >
+          </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+      <Component Id="Hello.vbs" Guid="{B318190C-ABA8-46FA-B267-BC32B6C51E98}">
+        <File Id="Hello.vbs" KeyPath="yes" Source="$(var.ProjectDir)Hello.vbs" />
+      </Component>
+    </ComponentGroup>
+
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <UIRef Id="WixUI_InstallDir"/>
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)eula.rtf" />
+    
+    <Binary Id='Hello.vbs' SourceFile='$(var.ProjectDir)Hello.vbs' />
+    <CustomAction Id='UI_Hello.vbs' VBScriptCall='' BinaryKey='Hello.vbs'  Execute='immediate' Return='ignore'/>
+    <CustomAction Id='Execute_Hello.vbs' VBScriptCall='' BinaryKey='Hello.vbs' Execute='immediate' Return='ignore'/>
+
+    <InstallUISequence>
+      <Custom Action="UI_Hello.vbs" After="AppSearch">NOT Installed</Custom>
+    </InstallUISequence>
+
+
+    <InstallExecuteSequence>
+      <Custom Action='Execute_Hello.vbs' After='AppSearch'>NOT Installed</Custom>
+    </InstallExecuteSequence>
+
+  </Fragment>
+</Wix>

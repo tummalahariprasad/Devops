@@ -1,0 +1,7 @@
+C:\Users\320078619\source\repos\Devops_KT\Devops_KT\bin\Debug\Devops_KT.msi
+C:\Users\320078619\source\repos\Devops_KT\Devops_KT\bin\Debug\Devops_KT.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\Devops_KT.wixproj.BindContentsFileListnull.txt
+obj\Debug\Devops_KT.wixproj.BindOutputsFileListnull.txt
+obj\Debug\Devops_KT.wixproj.BindBuiltOutputsFileListnull.txt
+obj\Debug\FileSystem2.wixobj

@@ -1,0 +1,8 @@
+INGBTCPIC5VW504_169.98_kiran
+130.147.169.98
+windows server 2012 R2 SSI image
+c: drive 300GB d: drive 600GB
+12 vCPUs 24GB Memory
+
+code1\320050225
+Admin1EDI!

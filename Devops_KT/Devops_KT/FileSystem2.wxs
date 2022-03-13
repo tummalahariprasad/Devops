@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TEST3">
+            <Directory Id="dirB1638AD6316B76053768F666594834C5" Name="MsiZap" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="FileSystem_Components">
+            <Component Id="cmpBDE1E6DBC8D3393C8D722A31FC51FE74" Directory="TEST3" Guid="{884664DA-16BE-4503-9DB0-8C49DDB3B5F0}">
+                <File Id="fil4A87D194C269EF80078F5D9127D85205" KeyPath="yes" Source="$(var.FileSystem)\4Test.ps1" />
+            </Component>
+            <Component Id="cmpC708636E04A594CB271A8262329F1269" Directory="TEST3" Guid="{9D8FEE29-504B-4E5B-90E0-358C1D976980}">
+                <File Id="fil6EFC731648A2D5B1FDA5ED78C39BE13B" KeyPath="yes" Source="$(var.FileSystem)\EC Migration build.txt" />
+            </Component>
+            <Component Id="cmp67C339BC8922FD301588301236808BB2" Directory="TEST3" Guid="{F96F323A-934A-462D-9EFD-32D6F1FECD42}">
+                <File Id="filE0190605ED1E4EE2736B5DC44C3C933C" KeyPath="yes" Source="$(var.FileSystem)\isp12 nm upload.PNG" />
+            </Component>
+            <Component Id="cmp2A520617B2D98B5E652DD4D45A3858EA" Directory="TEST3" Guid="{2A2CDB7A-29BE-4390-9E01-7B652D595F57}">
+                <File Id="fil34DBA06FC665ABA2C02CFFC9552316A5" KeyPath="yes" Source="$(var.FileSystem)\isp13 nm upload.PNG" />
+            </Component>
+            <Component Id="cmpC4A52925692D1EB6938F243DC2C3A847" Directory="TEST3" Guid="{AC99DFC7-893C-47FA-A2B2-E4FB6C81594C}">
+                <File Id="fil92BF0E82C55602B72581FF156047E9EF" KeyPath="yes" Source="$(var.FileSystem)\Philips.PmsNM.Applications.ARinMMV.dll" />
+            </Component>
+            <Component Id="cmp4F62A1681C3FCFECE5C1E72CB99430EE" Directory="TEST3" Guid="{82EB8C55-9742-4173-A791-8292E1AA2C09}">
+                <File Id="fil97ED3EBBCFCC5ECB859C7103813D32DC" KeyPath="yes" Source="$(var.FileSystem)\Reg.reg" />
+            </Component>
+            <Component Id="cmp6C6C7506A2D1F1A9E46E20D1C89BDF19" Directory="dirB1638AD6316B76053768F666594834C5" Guid="{C1AD7F25-C9F7-453E-AE16-A49D459A5970}">
+                <File Id="fil6336D3C962A4BC569E3303EC6F0BC48A" KeyPath="yes" Source="$(var.FileSystem)\MsiZap\MsiZap.Exe" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

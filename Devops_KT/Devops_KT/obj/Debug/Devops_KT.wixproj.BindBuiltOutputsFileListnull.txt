@@ -1,0 +1,2 @@
+C:\Users\320078619\source\repos\Devops_KT\Devops_KT\bin\Debug\Devops_KT.msi
+C:\Users\320078619\source\repos\Devops_KT\Devops_KT\bin\Debug\Devops_KT.wixpdb

@@ -27,7 +27,7 @@
         </Directory>
       </Directory>
     </Directory>
-  </Fragment>sdfdsf
+  </Fragment>
 
   <Fragment>
     <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">

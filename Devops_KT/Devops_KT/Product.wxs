@@ -47,7 +47,7 @@
     <CustomAction Id='Execute_Hello.vbs' VBScriptCall='' BinaryKey='Hello.vbs' Execute='immediate' Return='ignore'/>
 
     <InstallUISequence>
-      <Custom Action="UI_Hello.vbs" After="AppSearch">NOT Installed</Custom>
+      <!--<Custom Action="UI_Hello.vbs" After="AppSearch">NOT Installed</Custom>-->
     </InstallUISequence>
 
 
